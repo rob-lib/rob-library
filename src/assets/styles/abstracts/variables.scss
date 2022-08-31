@@ -1,0 +1,10 @@
+@use '@angular/material' as mat;
+@use '../themes/breaking-bad.theme' as customTheme;
+
+$primary-palette: mat.define-palette(customTheme.$primary-map);
+$accent-palette: mat.define-palette(customTheme.$secondary-map);
+
+$primary: customTheme.$primary;
+$primaryLight: customTheme.$primaryLight;
+$secondary: customTheme.$secondary;
+$secondaryLight: customTheme.$secondaryLight;
