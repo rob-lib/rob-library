@@ -16,7 +16,7 @@ $rob-library-primary: mat.define-palette(var.$primary-palette);
 $rob-library-accent: mat.define-palette(var.$accent-palette);
 
 // The warn palette is optional (defaults to red).
-$rob-library-warn: mat.define-palette(mat.$red-palette);
+$rob-library-warn: mat.define-palette(var.$warn-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".

@@ -1,0 +1,33 @@
+.character-item_container {
+  display: flex;
+  height: 130px;
+  width: 350px;
+
+  img {
+    border-radius: 100%;
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    object-position: top;
+    aspect-ratio: 1/2;
+  }
+
+  &-detail {
+    display: flex;
+    flex-direction: column;
+    width: -webkit-fill-available;
+    padding-left: 1rem;
+    gap: 10px;
+
+    > div {
+      min-width: 2rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &_occupation {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
