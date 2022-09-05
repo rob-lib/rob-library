@@ -1,0 +1,25 @@
+@use '/src/styles/abstracts/variables' as var;
+
+.app-component_content {
+  max-height: 100vh;
+  height: -webkit-fill-available;
+
+  &_layout {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+
+    height: var.$height;
+    
+    &-menu {
+      width: 200px;
+      height: -webkit-fill-available;
+    }
+    &-view {
+      width: 100%;
+      height: -webkit-fill-available;
+      padding: 20px 0;
+      margin: 0 45px;
+    }
+  }
+}

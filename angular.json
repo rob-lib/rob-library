@@ -28,7 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/assets/styles/custom-theme.scss",
+              "src/styles/custom-theme.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -117,7 +117,7 @@
       "projectType": "library",
       "root": "projects/rob-lib",
       "sourceRoot": "projects/rob-lib/src",
-      "prefix": "lib",
+      "prefix": "rob",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"

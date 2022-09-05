@@ -1,0 +1,17 @@
+{
+  "title": "Technical test - Breaking Bad",
+  "character": "Characters",
+  "episodes": "Episodes",
+  "deaths": "Deaths",
+  "characterDetail": {
+    "imgAlt": "Photo of {{name}} ({{nickname}})",
+    "name": "Nane",
+    "nickname": "Nickname",
+    "occupation": "Occupation",
+    "birthday": "Birthday",
+    "appearance": "Seasons in which it appears",
+    "status": "Status",
+    "portrayed": "Actor / Actress",
+    "season": "Season {{season}}"
+  }
+}

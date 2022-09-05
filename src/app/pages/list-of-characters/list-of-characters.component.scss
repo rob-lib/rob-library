@@ -1,0 +1,12 @@
+.list-of-characters_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  row-gap: 10px;
+
+  &-element {
+    min-width: 350px;
+    text-decoration: none;  
+  }
+}
