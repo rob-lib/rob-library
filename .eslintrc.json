@@ -16,6 +16,7 @@
         "createDefaultProgram": true
       },
       "extends": [
+        "eslint:recommended",
         "airbnb-typescript/base",
         "plugin:import/recommended",
         "plugin:@angular-eslint/recommended",
@@ -38,7 +39,35 @@
             "prefix": "app",
             "style": "kebab-case"
           }
-        ]
+        ],
+        "import/no-unresolved": "off",
+        "@typescript-eslint/lines-between-class-members": "off",
+        "import/named": "off"
+      }
+    },
+    {
+      "files": [
+        "*.module.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "eslint:recommended",
+        "airbnb-typescript/base",
+        "plugin:import/recommended",
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "plugin:prettier/recommended"
+      ],
+      "rules": {
+        "import/no-unresolved": "off",
+        "prettier/prettier": "off",
+        "@typescript-eslint/lines-between-class-members": "off",
+        "import/named": "off"
       }
     },
     {

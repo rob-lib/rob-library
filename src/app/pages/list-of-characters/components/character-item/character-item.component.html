@@ -1,0 +1,15 @@
+<mat-card>
+  <div class="character-item_container">
+    <img [src]="character.img" [alt]="'characterDetail.img_alt' | translate: imgAlt" />
+    <section class="character-item_container-detail">
+      <div>
+        <span>{{ 'characterDetail.name' | translate }}</span>
+        <span>{{ character.name }}</span>
+      </div>
+      <div>
+        <span>{{ 'characterDetail.nickname' | translate }}</span>
+        <span>{{ character.nickname }}</span>
+      </div>
+    </section>
+  </div>
+</mat-card>

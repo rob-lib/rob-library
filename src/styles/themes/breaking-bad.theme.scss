@@ -1,0 +1,59 @@
+$primary-map: (
+  50 : #4c8c4a,
+  100 : #4c8c4a,
+  200 : #4c8c4a,
+  300 : #4c8c4a,
+  400 : #1b5e20,
+  500 : #1b5e20,
+  600 : #1b5e20,
+  700 : #003300,
+  800 : #003300,
+  900 : #003300,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+  )
+);
+
+$secondary-map: (
+  50 : #eff15d,
+  100 : #eff15d,
+  200 : #eff15d,
+  300 : #eff15d,
+  400 : #babf27,
+  500 : #babf27,
+  600 : #babf27,
+  700 : #868f00,
+  800 : #868f00,
+  900 : #868f00,
+  contrast: (
+    50 : #005600,
+    100 : #005600,
+    200 : #005600,
+    300 : #005600,
+    400 : #005600,
+    500 : #005600,
+    600 : #005600,
+    700 : #005600,
+    800 : #005600,
+    900 : #005600,
+  )
+);
+
+$primary: #1b5e20;
+$primaryLight: #4c8c4a;
+$primaryDark: #003300;
+$primaryText: #ffffff;
+
+$secondary: #babf27;
+$secondaryLight: #eff15d;
+$secondaryDark: #868f00;
+$secondaryText: #005600;

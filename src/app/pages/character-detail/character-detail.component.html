@@ -1,0 +1,74 @@
+<div class="character-detail_content" *ngIf="character">
+  <h1>{{ character.name }}</h1>
+
+  <section class="character-detail_container">
+    <div class="character-detail_container-table">
+      <mat-expansion-panel expanded="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h2>Informacion general</h2>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <div class="general-info_content table-long">
+          <div>
+            <span>{{ 'characterDetail.name' | translate }}</span>
+            <span>{{ character.name }}</span>
+          </div>
+          <div>
+            <span>{{ 'characterDetail.nickname' | translate }}</span>
+            <span>{{ character.nickname }}</span>
+          </div>
+          <div>
+            <span>{{ 'characterDetail.portrayed' | translate }}</span>
+            <span>{{ character.portrayed }}</span>
+          </div>
+          <div>
+            <span>{{ 'characterDetail.birthday' | translate }}</span>
+            <span>{{ character.birthday | normalizedDate: 'dd MMM YYYY' | titlecase }}</span>
+          </div>
+          <div>
+            <span>{{ 'characterDetail.status' | translate }}</span>
+            <span>{{ character.status }}</span>
+          </div>
+        </div>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel expanded="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h2>{{ 'characterDetail.occupation' | translate }}</h2>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <div class="occupation" [ngClass]="{ 'table-long': character.occupation.length > 1 }">
+          <span *ngFor="let occupation of character.occupation">{{ occupation }}</span>
+        </div>
+      </mat-expansion-panel>
+
+      <mat-expansion-panel expanded="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h2>{{ 'characterDetail.appearance' | translate }}</h2>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <div class="appearance" [ngClass]="{ 'table-long': character.appearance.length > 1 }">
+          <span *ngFor="let season of character.appearance"
+            >{{ 'characterDetail.season' | translate: { season } }}
+          </span>
+        </div>
+      </mat-expansion-panel>
+    </div>
+
+    <div class="pircture-area">
+      <img id="profile" [src]="character.img" [alt]="'characterDetail.img_alt' | translate: imgAlt" />
+      <div class="bubble" *ngIf="quote" (click)="getRandomQuote()">
+        <span class="refresh-icon">
+          <mat-icon [@refresh]="quoteLoading">autorenew</mat-icon>
+        </span>
+        <span>{{ quote.quote }}</span>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,91 @@
+@use '@angular/material' as mat;
+@use 'src/styles/abstracts/variables' as var;
+
+.character-detail_container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+
+  &-table {
+    display: inherit;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+
+    .occupation, .appearance {
+      display: flex;
+      justify-content: space-between;
+      row-gap: 5px;
+      flex-direction: column;
+    }
+
+    .general-info_content {
+      display: flex;
+      flex-direction: column;
+      row-gap: 5px;
+      > div {
+        display: inherit;
+        justify-content: space-between;
+      }
+    }
+  }
+
+  .pircture-area {
+    margin: 0 1rem;
+    padding: 0.8rem 1rem 1rem;
+    background-color: var.$primaryLight;
+    border-radius: 14px;
+    
+    .bubble {
+      position: relative;
+      max-width: 280px;
+      border-radius: 8px;
+      padding: 1rem 1rem 0.7rem;
+      background: white;
+      box-shadow: -6px -5px 20px -5px rgb(0 0 0 / 50%);
+      border: solid 1px #c7c7c7;;
+      cursor: pointer;
+
+      &:before {
+        border: 13px solid white;
+        content: "";
+        border-left-color: transparent;
+        border-right-color: transparent;
+        border-top-color: transparent;
+        position: absolute;
+        top: -25px;
+      }
+
+      .refresh-icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: grey;
+          
+        mat-icon {
+          font-size: 18px;
+          width: auto;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  #profile {
+    width: 280px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 8px;
+  }
+}
+
+.table-long {
+  > div, > span {
+    margin: 0 -24px;
+    padding: 0 24px;
+  }
+  > :nth-child(2n) {
+    background-color: rgba(var.$secondaryLight, 0.3);
+  }
+} 

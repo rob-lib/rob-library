@@ -1,0 +1,17 @@
+{
+  "title": "Prueba técnica - Breaking Bad",
+  "character": "Personajes",
+  "episodes": "Episodios",
+  "deaths": "Muertes",
+  "characterDetail": {
+    "imgAlt": "Foto de {{name}} ({{nickname}})",
+    "name": "Nombre",
+    "nickname": "Apodo",
+    "occupation": "Ocupación",
+    "birthday": "Fecha de nacimiento",
+    "appearance": "Temporadas en las que aparece",
+    "status": "Estado",
+    "portrayed": "Actor / Actriz",
+    "season": "Temporada {{season}}"
+  }
+}

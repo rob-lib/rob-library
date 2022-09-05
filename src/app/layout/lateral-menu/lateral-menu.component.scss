@@ -1,0 +1,5 @@
+@use '/src/styles/abstracts/variables' as var;
+
+.lateral-menu_container {
+  height: var.$height;
+}

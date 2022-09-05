@@ -1,0 +1,17 @@
+.rob-lateral-menu-body_containter {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
+
+  .mat-button {
+    text-align: start;
+    border-radius: 0;
+
+    &.active {
+      background-color: #d0d32163;
+      color: #005600;
+    } 
+  }
+}

@@ -1,0 +1,14 @@
+@use '@angular/material' as mat;
+@use '../themes/breaking-bad.theme' as customTheme;
+
+/* Define palettes */
+$primary-palette: customTheme.$primary-map;
+$accent-palette: customTheme.$secondary-map;
+$warn-palette: mat.$red-palette;
+
+/* variables */
+$primary: customTheme.$primary;
+$primaryLight: customTheme.$primaryLight;
+$secondary: customTheme.$secondary;
+$secondaryLight: customTheme.$secondaryLight;
+$height: calc(100% - 68.44px);
