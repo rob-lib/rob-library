@@ -1,5 +1,8 @@
 .rob-lateral-menu_containter {
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   
   background-color: #f3f3f3;
   border-right: solid 1px #d1d1d1;
