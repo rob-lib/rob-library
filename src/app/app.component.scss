@@ -4,6 +4,10 @@
   max-height: 100vh;
   height: -webkit-fill-available;
 
+  .header_content-lang {
+    width: max-content;
+  }
+
   &_layout {
     display: flex;
     flex-wrap: nowrap;
