@@ -1,6 +1,11 @@
 <mat-card>
   <div class="character-item_container">
-    <img [src]="character.img" [alt]="'characterDetail.img_alt' | translate: imgAlt" />
+    <img
+      bubble
+      width="180px"
+      height="120px"
+      [src]="character.img"
+      [alt]="'characterDetail.img_alt' | translate: imgAlt" />
     <section class="character-item_container-detail">
       <div>
         <span>{{ 'characterDetail.name' | translate }}</span>

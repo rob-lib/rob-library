@@ -2,6 +2,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { MatSelectModule } from '@angular/material/select';
 
 import { SpinnerModule } from '@robLib/modules/spinner';
 import { CustomTranslateModule } from '@robLib/modules/custom-translate';
@@ -29,7 +30,8 @@ const StandaloneComponents = [
     SpinnerModule,
     HeaderModule,
     NgScrollbarModule,
-    CustomTranslateModule
+    CustomTranslateModule,
+    MatSelectModule
   ],
   bootstrap: [AppComponent],
 })

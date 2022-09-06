@@ -1,7 +1,13 @@
 <rob-spinner></rob-spinner>
 
 <div class="app-component_content">
-  <rob-header></rob-header>
+  <rob-header>
+    <mat-select class="header_content-lang" [(value)]="headerService.targetLang">
+      <mat-option *ngFor="let lang of langs" [value]="lang.value" (click)="headerService.translateLanguageTo(lang)">
+        {{ lang.viewValue }}
+      </mat-option>
+    </mat-select>
+  </rob-header>
 
   <div class="app-component_content_layout">
     <div class="app-component_content_layout-menu">
