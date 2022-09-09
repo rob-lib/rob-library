@@ -7,6 +7,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class NormalizedDatePipe extends DatePipe implements PipeTransform {
   override transform(value: any, format?: string, timezone?: string, locale?: string): any {
-    return value !== 'Unknown' ? super.transform(value, format, timezone, locale) : '---';
+    const processedValue = value === 'Unknown' ? undefined : value;
+    return super.transform(processedValue, format, timezone, locale) ?? '---';
   }
 }
