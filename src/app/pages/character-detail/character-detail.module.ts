@@ -4,8 +4,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { TranslateModule } from '@ngx-translate/core';
 import { MatExpansionModule } from '@angular/material/expansion';
 
+import { NormalizedDatePipe } from '@robLib/pipes';
 import { LazyImgDirective } from '@robLib/directives';
-import { NormalizedDatePipe } from '@shared/pipes/normalized-date.pipe';
 
 import { CharacterDetailRoutingModule } from './character-detail-routing.module';
 import { CharacterDetailComponent } from './character-detail.component';
