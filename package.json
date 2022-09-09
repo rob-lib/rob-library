@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "build:lib": "ng-packagr -p projects/rob-lib/ng-package.json"
+    "build:lib": "ng-packagr -p projects/rob-lib/ng-package.json",
+    "test:rob-lib": "ng test rob-lib --code-coverage"
   },
   "private": true,
   "dependencies": {
