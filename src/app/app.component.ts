@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { HeaderService } from '@robLib/modules/layout';
-import { SpinnerService } from '@robLib/modules/spinner';
 
 @Component({
   selector: 'app-root',
@@ -15,8 +14,7 @@ export class AppComponent {
     { viewValue: 'EN', value: 'en-EN' },
   ];
 
-  constructor(private spinner: SpinnerService, public headerService: HeaderService) {
+  constructor(public headerService: HeaderService) {
     this.headerService.addLang(this.langs);
-    // this.spinner.show();
   }
 }
