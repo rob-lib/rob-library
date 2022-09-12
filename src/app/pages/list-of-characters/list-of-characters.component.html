@@ -1,8 +1,10 @@
-<div class="list-of-characters_container">
-  <a
-    class="list-of-characters_container-element"
-    *ngFor="let character of characterList"
-    [routerLink]="[character.char_id]">
-    <app-character-item [character]="character"></app-character-item>
-  </a>
-</div>
+<ng-scrollbar>
+  <div class="list-of-characters_container">
+    <a
+      class="list-of-characters_container-element"
+      *ngFor="let character of characterList"
+      [routerLink]="[character.char_id]">
+      <app-character-item [character]="character"></app-character-item>
+    </a>
+  </div>
+</ng-scrollbar>

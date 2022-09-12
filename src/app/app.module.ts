@@ -2,20 +2,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { MatSelectModule } from '@angular/material/select';
 
 import { SpinnerModule } from '@robLib/modules/spinner';
-import { HeaderModule, LateralMenuModule } from '@robLib/modules/layout';
-import { NgScrollbarModule } from 'ngx-scrollbar';
+import { HeaderModule } from '@robLib/modules/layout';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LateralMenuComponent } from './layout/lateral-menu/lateral-menu.component';
 import { CustomTranslateModule } from '@robLib/modules';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 const StandaloneComponents = [
-  LateralMenuComponent
+  LateralMenuComponent,
+  NotFoundComponent
 ]
 
 @NgModule({
@@ -24,14 +24,11 @@ const StandaloneComponents = [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    StandaloneComponents,
-    LateralMenuModule,
     BrowserAnimationsModule,
     SpinnerModule,
     HeaderModule,
-    NgScrollbarModule,
     CustomTranslateModule,
-    MatSelectModule
+    StandaloneComponents,
   ],
   bootstrap: [AppComponent],
 })

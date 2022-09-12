@@ -8,6 +8,7 @@ import { ImgBubbleDirective, LazyImgDirective } from '@robLib/directives';
 import { ListOfCharactersRoutingModule } from './list-of-characters-routing.module';
 import { ListOfCharactersComponent } from './list-of-characters.component';
 import { CharacterItemComponent } from './components/character-item/character-item.component';
+import { NgScrollbarModule } from 'ngx-scrollbar';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CharacterItemComponent } from './components/character-item/character-it
     ListOfCharactersRoutingModule,
     MatCardModule,
     LazyImgDirective,
-    ImgBubbleDirective
+    ImgBubbleDirective,
+    NgScrollbarModule
   ]
 })
 export class ListOfCharactersModule { }

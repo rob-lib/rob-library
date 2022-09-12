@@ -1,6 +1,9 @@
 /* eslint-disable @angular-eslint/directive-selector */
 import { Directive, ElementRef } from '@angular/core';
 
+/**
+ * Añade el attributo loading=lazy en las imagenes que no lo tienen implementado.
+ */
 @Directive({
   selector: 'img:not([loading])',
   standalone: true,

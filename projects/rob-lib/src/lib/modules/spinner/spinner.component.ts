@@ -13,7 +13,6 @@ import { SpinnerService } from './spinner.service';
 })
 export class SpinnerComponent {
   @Input() color: MaterialAngularThemes = MaterialAngularThemes.primary;
-
   readonly showSpinner$ = this.spinnerService.showSpinner$;
 
   constructor(private spinnerService: SpinnerService) {}
