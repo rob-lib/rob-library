@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { MaterialAngularThemes } from '@robLib/models/material-angular-themes.enum';
+import { MaterialAngularThemes } from '../../models/material-angular-themes.enum';
 import { SpinnerService } from './spinner.service';
 
 @Component({

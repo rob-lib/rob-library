@@ -7,7 +7,11 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [SpinnerComponent],
-  imports: [CommonModule, MatProgressSpinnerModule, BrowserAnimationsModule],
+  imports: [
+    CommonModule,
+    MatProgressSpinnerModule,
+    BrowserAnimationsModule,
+  ],
   providers: [SpinnerService],
   exports: [SpinnerComponent],
 })
