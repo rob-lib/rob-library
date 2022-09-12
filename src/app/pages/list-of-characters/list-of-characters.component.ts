@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 import { SpinnerService } from '@robLib/modules/spinner';
 import { Character } from '@shared/models/character.model';
 import { CharacterService } from '@shared/services/character/character.service';
@@ -11,18 +10,10 @@ import { CharacterService } from '@shared/services/character/character.service';
 export class ListOfCharactersComponent implements OnInit {
   characterList!: Character[];
 
-  constructor(
-    private characterService: CharacterService,
-    private spinnerService: SpinnerService,
-    private router: Router
-  ) {}
+  constructor(private characterService: CharacterService, private spinnerService: SpinnerService) {}
 
   ngOnInit(): void {
     this.#getList();
-  }
-
-  a(id: number) {
-    this.router.navigate(['characters', id]);
   }
 
   #getList() {
