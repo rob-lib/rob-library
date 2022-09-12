@@ -15,6 +15,10 @@ export class HeaderService {
 
   constructor(private translate: TranslateService) {}
 
+  getLangs(): Lang[] {
+    return this.langs;
+  }
+
   addLang(lang: Lang | Lang[]) {
     if (Array.isArray(lang)) {
       this.langs = this.langs.concat(lang);

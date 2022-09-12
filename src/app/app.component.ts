@@ -7,8 +7,6 @@ import { HeaderService } from '@robLib/modules/layout';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'rob-library';
-
   readonly langs = [
     { viewValue: 'ES', value: 'es-ES' },
     { viewValue: 'EN', value: 'en-EN' },

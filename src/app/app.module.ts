@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
 import { SpinnerModule } from '@robLib/modules/spinner';
-import { HeaderModule } from '@robLib/modules/layout';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,10 +11,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LateralMenuComponent } from './layout/lateral-menu/lateral-menu.component';
 import { CustomTranslateModule } from '@robLib/modules';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { HeaderComponent } from './layout/header/header.component';
 
 const StandaloneComponents = [
   LateralMenuComponent,
-  NotFoundComponent
+  NotFoundComponent,
+  HeaderComponent
 ]
 
 @NgModule({
@@ -26,7 +27,6 @@ const StandaloneComponents = [
     AppRoutingModule,
     BrowserAnimationsModule,
     SpinnerModule,
-    HeaderModule,
     CustomTranslateModule,
     StandaloneComponents,
   ],
