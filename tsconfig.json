@@ -17,16 +17,23 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "paths": {
-      "rob-lib": ["dist/rob-lib"],
-      "@robLib/*": ["projects/rob-lib/src/lib/*"],
-      "@shared/*": ["src/app/shared/*"]
+      "rob-lib": [
+        "dist/rob-lib"
+      ],
+      "@robLib/*": [
+        "projects/rob-lib/src/lib/*"
+      ],
+      "@shared/*": [
+        "src/app/shared/*"
+      ]
     },
-    "target": "es2020",
+    "target": "ES2022",
     "module": "es2020",
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "useDefineForClassFields": false
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

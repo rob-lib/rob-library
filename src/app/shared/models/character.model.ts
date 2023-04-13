@@ -1,12 +1,14 @@
 export interface Character {
-  readonly char_id: number;
+  readonly id: number;
   name: string;
-  birthday: Date;
-  occupation: string[];
-  img: URL;
-  nickname: string;
-  portrayed: string;
-  status: string;
-  category: string;
+  species: string;
   appearance: string;
+  type: any;
+  gender: string;
+  origin: any;
+  location: any;
+  image: URL;
+  episode: any[];
+  url: string;
+  created: string;
 }
