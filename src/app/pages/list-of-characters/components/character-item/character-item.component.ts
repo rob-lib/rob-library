@@ -8,7 +8,7 @@ import { Character } from 'src/app/shared/models/character.model';
 })
 export class CharacterItemComponent implements OnInit {
   @Input() character!: Character;
-  imgAlt!: { name: string; nickname: string };
+  imgAlt!: { name: string };
 
   ngOnInit(): void {
     this.setImgAlt();
@@ -17,7 +17,6 @@ export class CharacterItemComponent implements OnInit {
   private setImgAlt(): void {
     this.imgAlt = {
       name: this.character.name,
-      nickname: this.character.nickname,
     };
   }
 }

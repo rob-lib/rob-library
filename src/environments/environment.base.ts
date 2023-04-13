@@ -1,3 +1,3 @@
 export const environment = {
-  endpointApi: 'https://pokeapi.co/api/v2/',
+  endpointApi: 'https://rickandmortyapi.com/api',
 };

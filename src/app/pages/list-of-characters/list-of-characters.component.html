@@ -3,7 +3,7 @@
     <a
       class="list-of-characters_container-element"
       *ngFor="let character of characterList"
-      [routerLink]="[character.char_id]">
+      [routerLink]="[character.id]">
       <app-character-item [character]="character"></app-character-item>
     </a>
   </div>

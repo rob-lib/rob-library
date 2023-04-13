@@ -12,7 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  headerTitle = 'The Breaking Bad';
+  headerTitle = 'rick and Morty';
   langs = this.headerService.getLangs();
 
   constructor(public headerService: HeaderService) {}
