@@ -12,6 +12,7 @@ import { LateralMenuComponent } from './layout/lateral-menu/lateral-menu.compone
 import { CustomTranslateModule } from '@robLib/modules';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { HeaderComponent } from './layout/header/header.component';
+import { MatSelectModule } from '@angular/material/select';
 
 const StandaloneComponents = [
   LateralMenuComponent,
@@ -28,6 +29,7 @@ const StandaloneComponents = [
     BrowserAnimationsModule,
     SpinnerModule,
     CustomTranslateModule,
+    MatSelectModule,
     StandaloneComponents,
   ],
   bootstrap: [AppComponent],

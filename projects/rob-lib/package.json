@@ -1,21 +1,21 @@
 {
   "name": "rob-lib",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "peerDependencies": {
     "rxjs": "~7.5.0",
     "zone.js": "^0.11.8",
-    "@angular/cdk": "^14.2.1",
-    "@angular/core": "^14.0.0",
-    "@angular/common": "^14.0.0",
-    "@angular/router": "^14.0.0",
-    "@angular/material": "~14.2.0",
-    "@angular/animations": "^14.2.0",
+    "@angular/cdk": "~15.2.6",
+    "@angular/core": "^15.2.7",
+    "@angular/common": "^15.2.7",
+    "@angular/router": "^15.2.7",
+    "@angular/material": "~15.2.6",
+    "@angular/animations": "^15.2.7",
     "@ngx-translate/core": "^14.0.0",
     "@angular/platform-browser": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
-    "@angular/platform-browser-dynamic": "^14.2.0"
-  },
-  "dependencies": {
-    "tslib": "^2.3.0"
+    "@angular/platform-browser-dynamic": "^15.2.7",
+    "ngx-scrollbar": "^11.0.0",
+    "tslib": "^2.5.0",
+    "typescript": "~4.9.5"
   }
 }

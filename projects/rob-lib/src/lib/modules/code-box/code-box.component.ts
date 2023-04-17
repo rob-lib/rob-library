@@ -2,9 +2,9 @@ import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { Clipboard, ClipboardModule } from '@angular/cdk/clipboard';
-import { Expand } from '@robLib/animations/expand';
 import { MatTooltip, MAT_TOOLTIP_SCROLL_STRATEGY_FACTORY_PROVIDER, MatTooltipModule } from '@angular/material/tooltip';
 import { HAMMER_GESTURE_CONFIG, HammerGestureConfig, HammerModule } from '@angular/platform-browser';
+import { Expand } from '../../animations';
 
 @Component({
   selector: 'rob-code-box',

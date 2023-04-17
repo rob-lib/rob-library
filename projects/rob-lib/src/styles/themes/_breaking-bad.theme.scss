@@ -1,5 +1,5 @@
 $primary-map: (
-  50 : #4c8c4a,
+  50 : #93c591,
   100 : #4c8c4a,
   200 : #4c8c4a,
   300 : #4c8c4a,
@@ -33,7 +33,7 @@ $secondary-map: (
   600 : #babf27,
   700 : #868f00,
   800 : #868f00,
-  900 : #868f00,
+  900 : #d0d32163,
   contrast: (
     50 : #005600,
     100 : #005600,
@@ -48,12 +48,16 @@ $secondary-map: (
   )
 );
 
-$primary: #1b5e20;
-$primaryLight: #4c8c4a;
-$primaryDark: #003300;
-$primaryText: #ffffff;
+// $primary: #1b5e20;
+// $primaryLight: #4c8c4a;
+// $primaryDark: #003300;
+// $primaryText: #ffffff;
 
-$secondary: #babf27;
-$secondaryLight: #eff15d;
-$secondaryDark: #868f00;
-$secondaryText: #005600;
+// $secondary: #babf27;
+// $secondaryLight: #eff15d;
+// $secondaryDark: #868f00;
+// $secondaryText: #005600;
+
+/* Define palettes */
+$breaking-bad-primary: $primary-map;
+$breaking-bad-accent: $secondary-map;

@@ -30,7 +30,12 @@ export class HeaderService {
   }
 
   translateLanguageTo(lang: Lang) {
-    this.translate.use(lang.value);
+    try {
+      this.translate.use(lang.value);
+      this.targetLang = lang.value;
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   #getDefaultLang(): void {

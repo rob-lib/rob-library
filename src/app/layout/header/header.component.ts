@@ -1,18 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderModule, HeaderService } from '@robLib/modules';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule, MatMenuTrigger } from '@angular/material/menu';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, HeaderModule, MatSelectModule, MatButtonModule],
+  imports: [CommonModule, HeaderModule, MatMenuModule, MatSelectModule, MatButtonModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
-  headerTitle = 'rick and Morty';
+  @ViewChild(MatMenuTrigger) trigger!: MatMenuTrigger;
+
+  headerTitle = 'Rick and Morty';
   langs = this.headerService.getLangs();
 
   constructor(public headerService: HeaderService) {}
