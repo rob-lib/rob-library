@@ -10,7 +10,9 @@
     "lint": "ng lint",
     "test:rob-lib": "ng test rob-lib --code-coverage",
     "build:rob-lib": "ng-packagr -p projects/rob-lib/ng-package.json",
-    "publish:rob-lib": "cd dist/rob-lib && npm publish"
+    "publish:rob-lib": "cd dist/rob-lib && npm publish",
+    "git:config": "git config --local core.hooksPath .githooks/",
+    "postinstall": "npm run git:config"
   },
   "private": true,
   "dependencies": {
