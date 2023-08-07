@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
@@ -13,5 +13,7 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrls: ['./lateral-menu.component.scss'],
 })
 export class LateralMenuComponent {
+  @Input() routes!: any[];
+
   readonly author = 'Robert García Morel';
 }

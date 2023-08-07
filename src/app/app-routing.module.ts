@@ -5,6 +5,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/characters', pathMatch: 'full' },
   { path: '404', loadComponent: () => import('./pages/not-found/not-found.component').then(mod => mod.NotFoundComponent) },
   { path: 'characters', loadChildren: () => import('./pages/list-of-characters/list-of-characters.module').then(m => m.ListOfCharactersModule) },
+  { path: 'spinner', loadComponent: () => import('./pages/spinner-custom/spinner-custom.component').then(m => m.SpinnerCustomComponent) },
   { path: '**', redirectTo: '/404', pathMatch: 'full' },
 ];
 

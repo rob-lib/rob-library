@@ -1,12 +1,17 @@
 <div class="lateral-menu_container">
   <rob-lateral-menu>
     <rob-lateral-menu-body>
+      <ng-container *ngFor="let route of routes">
+        <a mat-button [routerLink]="route.uri" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+          {{ route.name | translate }}
+        </a>
+      </ng-container>
+
       <a mat-button routerLink="/characters" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
         {{ 'character' | translate }}
       </a>
-      <a mat-button routerLink="/characterseee" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-        {{ 'charactereee' | translate }}
-      </a>
+      
+
     </rob-lateral-menu-body>
 
     <rob-lateral-menu-footer>

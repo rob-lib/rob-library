@@ -12,6 +12,10 @@ export class AppComponent {
     { viewValue: 'EN', value: 'en-EN' },
   ];
 
+  routes = [
+    {uri: 'spinner', name: 'Spinner'}
+  ]
+
   constructor(public headerService: HeaderService) {
     this.headerService.addLang(this.langs);
   }
