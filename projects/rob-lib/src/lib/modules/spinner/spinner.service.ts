@@ -20,21 +20,21 @@ export class SpinnerService {
   }
 
   async #addId(id: string): Promise<void> {
-    return new Promise<void>((res) => {
+    return new Promise<void>(res => {
       this.#foo(id, true, `Spinner Id ${id} already exists`);
       res();
     });
   }
 
   async #removeId(id: string): Promise<void> {
-    return new Promise<void>((res) => {
+    return new Promise<void>(res => {
       this.#foo(id, false, `Spinner Id ${id} don't exists`);
       res();
     });
   }
 
   #foo(id: string, value: boolean, errorText: string): void {
-    if (!!Object.keys(this.#matrixIds).find(v => v === id ) === !value) {
+    if (!!Object.keys(this.#matrixIds).find(v => v === id) === !value) {
       this.#matrixIds[id] = value;
     } else {
       console.warn(errorText);

@@ -5,7 +5,7 @@
       [@click]="clickAction"
       (click)="copyClipboard()"
       #tooltip="matTooltip"
-      matTooltip="Info about the action"
+      [matTooltip]="tooltipMessage"
       disableTooltipInteractivity="true"
     > content_paste </mat-icon>
   </span>
