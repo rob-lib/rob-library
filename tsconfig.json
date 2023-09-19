@@ -17,9 +17,6 @@
     "moduleResolution": "node",
     "importHelpers": true,
     "paths": {
-      "rob-lib": [
-        "dist/rob-lib"
-      ],
       "@robLib/*": [
         "projects/rob-lib/src/lib/*"
       ],
