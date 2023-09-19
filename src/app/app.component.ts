@@ -12,7 +12,7 @@ export class AppComponent {
     { viewValue: 'EN', value: 'en-EN' },
   ];
 
-  routes = [
+  readonly routes = [
     { uri: '', name: 'Home' },
     { uri: 'text', name: 'Text' },
     { uri: 'spinner', name: 'Spinner' },
