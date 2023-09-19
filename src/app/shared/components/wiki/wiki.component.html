@@ -1,0 +1,17 @@
+<h2>{{ template.title }}</h2>
+
+<section class="tab-element">
+  <mat-tab-group>
+    <ng-container *ngFor="let item of template.tab">
+      <mat-tab [label]="item.label">
+        <div>
+          <h3 class="tab-element-description" *ngIf="item.title">{{ item.title }}</h3>
+          <p class="tab-element-description" *ngIf="item.description">{{ item.description }}</p>
+          <div [ngStyle]="{ width: item.exampleCode.width || 'auto' }">
+            <rob-code-box>{{ item.exampleCode.text }}</rob-code-box>
+          </div>
+        </div>
+      </mat-tab>
+    </ng-container>
+  </mat-tab-group>
+</section>
