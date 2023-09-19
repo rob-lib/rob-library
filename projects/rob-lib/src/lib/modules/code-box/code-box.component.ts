@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { Clipboard, ClipboardModule } from '@angular/cdk/clipboard';
@@ -21,6 +21,7 @@ import { Expand } from '../../animations';
 export class CodeBoxComponent implements AfterViewInit {
   @ViewChild('codeBox') codeBox!: ElementRef<any>;
   @ViewChild('tooltip') tooltip!: MatTooltip;
+  @Input() tooltipMessage = 'Copy on clipboard';
 
   clipboardData!: string;
   clickAction = false;
@@ -30,9 +31,6 @@ export class CodeBoxComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.clipboardData = (this.codeBox.nativeElement.childNodes[1].data as string).trim();
-    // this.tooltip.disabled = true;
-    this.tooltip.show();
-    // this.tooltip.touchGestures()
   }
 
   copyClipboard(): void {

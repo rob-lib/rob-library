@@ -12,6 +12,12 @@ export class AppComponent {
     { viewValue: 'EN', value: 'en-EN' },
   ];
 
+  readonly routes = [
+    { uri: '', name: 'Home' },
+    { uri: 'text', name: 'Text' },
+    { uri: 'spinner', name: 'Spinner' },
+  ];
+
   constructor(public headerService: HeaderService) {
     this.headerService.addLang(this.langs);
   }
