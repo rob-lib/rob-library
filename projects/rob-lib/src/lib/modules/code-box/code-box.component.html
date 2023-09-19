@@ -1,13 +1,11 @@
 <!-- eslint-disable prettier/prettier -->
 <div class="code-box__container" #codeBox>
-  <span id="icon">
-    <mat-icon
-      [@click]="clickAction"
-      (click)="copyClipboard()"
-      #tooltip="matTooltip"
-      [matTooltip]="tooltipMessage"
-      disableTooltipInteractivity="true"
-    > content_paste </mat-icon>
-  </span>
   <ng-content></ng-content>
+  <mat-icon
+    [@click]="clickAction"
+    (click)="copyClipboard()"
+    #tooltip="matTooltip"
+    [matTooltip]="tooltipMessage"
+    disableTooltipInteractivity="true"
+  > content_paste </mat-icon>
 </div>
