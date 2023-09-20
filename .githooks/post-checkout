@@ -53,6 +53,7 @@ if [ "$is_branch_creation" = true ]; then
       # Realiza un único commit que incluye ambos cambios con el formato de mensaje solicitado
       git add "$package_json_root" "$package_json_project"
       git commit --no-verify -m "Init $branch_directory ${new_branch_name##*/}"
+      git push
       
       echo "Se ha actualizado la versión en $package_json_root y en $package_json_project a \"$new_version\""
     else
