@@ -1,6 +1,6 @@
 {
   "name": "rob-library",
-  "version": "0.2.0",
+  "version": "0.2.0-feature-crear-hooks-feature-custom-hooks-lib",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
