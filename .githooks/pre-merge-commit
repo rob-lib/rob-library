@@ -1,0 +1,57 @@
+#!/bin/bash
+
+# Obtén el nombre de la rama de destino (target branch)
+target_branch=$(git symbolic-ref --short HEAD)
+
+# Verifica si el archivo package.json existe en el directorio projects/rob-lib
+package_json_lib="projects/rob-lib/package.json"
+if [ -f "$package_json_lib" ]; then
+  # Extrae la versión actual del archivo package.json
+  current_version=$(grep -o '"version": ".*"' "$package_json_lib" | cut -d'"' -f4)
+
+  # Elimina el sufijo del número de versión (si existe)
+  new_version=$(echo "$current_version" | sed 's/-.*$//')
+
+  # Actualiza la versión en package.json
+  sed -i "s/\"version\": \"$current_version\"/\"version\": \"$new_version\"/" "$package_json_lib"
+
+  echo "Se ha eliminado el sufijo de la versión en $package_json_lib"
+else
+  echo "El archivo package.json no se encuentra en la ruta especificada."
+fi
+
+# Verifica si el archivo package.json existe en el directorio raiz
+package_json="package.json"
+if [ -f "$package_json" ]; then
+  # Extrae la versión actual del archivo package.json
+  current_version=$(grep -o '"version": ".*"' "$package_json" | cut -d'"' -f4)
+
+  # Actualiza la versión en package.json
+  sed -i "s/\"version\": \"$current_version\"/\"version\": \"$new_version\"/" "$package_json"
+
+  echo "Se ha eliminado el sufijo de la versión en $package_json"
+else
+  echo "El archivo package.json no se encuentra en la ruta especificada."
+fi
+
+# # Verifica si la rama de destino es "develop" o "master"
+# if [[ $target_branch == develop || $target_branch == master ]]; then
+#   # Verifica si el archivo package.json existe en el directorio projects/rob-lib
+#   package_json_lib="projects/rob-lib/package.json"
+#   if [ -f "$package_json_lib" ]; then
+#     # Extrae la versión actual del archivo package.json
+#     current_version=$(grep -o '"version": ".*"' "$package_json_lib" | cut -d'"' -f4)
+
+#     # Elimina el sufijo del número de versión (si existe)
+#     new_version=$(echo "$current_version" | sed 's/-.*$//')
+
+#     # Actualiza la versión en package.json
+#     sed -i "s/\"version\": \"$current_version\"/\"version\": \"$new_version\"/" "$package_json_lib"
+
+#     echo "Se ha eliminado el sufijo de la versión en $package_json"
+#   else
+#     echo "El archivo package.json no se encuentra en la ruta especificada."
+#   fi
+# else
+#   echo "El script solo se ejecuta en ramas de destino 'develop' o 'master'. No se realizaron cambios en package.json."
+# fi
