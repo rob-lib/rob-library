@@ -57,7 +57,8 @@ if [ "$is_branch_creation" = true ]; then
       echo "Se ha actualizado la versión en $package_json_root y en $package_json_project a \"$new_version\""
       
       # Realiza el push después de crear el commit
-      git push origin "$current_branch"
+      # git push origin "$current_branch"
+      # git fetch origin
     else
       echo "El archivo $package_json_root no se encuentra en la raíz del proyecto."
       exit 1
