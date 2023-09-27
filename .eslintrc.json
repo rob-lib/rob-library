@@ -79,7 +79,12 @@
         "plugin:@angular-eslint/template/recommended"
       ],
       "rules": {
-        "prettier/prettier": ["error", { "parser": "angular" }]
+        "prettier/prettier": [
+          "error",
+          {
+            "parser": "angular"
+          }
+        ]
       }
     }
   ]
