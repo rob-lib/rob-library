@@ -1,21 +1,22 @@
 {
   "name": "rob-lib",
-  "version": "0.1.1-feature-crear-hooks",
+  "version": "0.1.1-feature-crear-hooks-feature-update-angular-v16",
   "peerDependencies": {
     "rxjs": "~7.5.0",
-    "zone.js": "^0.11.8",
-    "@angular/cdk": "~15.2.6",
-    "@angular/core": "^15.2.7",
-    "@angular/common": "^15.2.7",
-    "@angular/router": "^15.2.7",
-    "@angular/material": "~15.2.6",
-    "@angular/animations": "^15.2.7",
+    "zone.js": "~0.13.3",
+    "@angular/cdk": "~16.2.6",
+    "@angular/core": "^16.2.6",
+    "@angular/common": "^16.2.6",
+    "@angular/router": "^16.2.6",
+    "@angular/material": "~16.2.6",
+    "@angular/animations": "^16.2.6",
     "@ngx-translate/core": "^14.0.0",
-    "@angular/platform-browser": "^14.0.0",
+    "@angular/platform-browser": "^16.2.6",
     "@ngx-translate/http-loader": "^7.0.0",
-    "@angular/platform-browser-dynamic": "^15.2.7",
+    "@angular/platform-browser-dynamic": "^16.2.6",
     "ngx-scrollbar": "^11.0.0",
     "tslib": "^2.5.0",
-    "typescript": "~4.9.5"
+    "typescript": "~4.9.5",
+    "@types/crypto-js": "^4.1.2"
   }
 }
