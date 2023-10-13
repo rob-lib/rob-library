@@ -12,7 +12,6 @@ jobs:
           node-version: '18'
       - run: npm ci
       - run: npm run build:rob-lib
-      - run: npm run publish:rob-lib
       - uses: JS-DevTools/npm-publish@v2
         with:
           token: ${{ secrets.NPM_TOKEN }}
