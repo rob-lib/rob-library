@@ -1,0 +1,35 @@
+.header_content {
+  width: -webkit-fill-available;
+  display: flex;
+  column-gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  padding: 0 1rem;
+
+  &-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0;
+
+    text-decoration: none;
+    color: inherit;
+
+    #logo {
+      max-width: 50px;
+      object-fit: cover;
+    }
+
+    #title {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+
+  &-lang {
+    width: max-content;
+  }
+}

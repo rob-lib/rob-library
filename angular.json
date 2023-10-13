@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/styles/_custom-theme.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -100,8 +101,76 @@
             ],
             "scripts": []
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
+    },
+    "rob-lib": {
+      "projectType": "library",
+      "root": "projects/rob-lib",
+      "sourceRoot": "projects/rob-lib/src",
+      "prefix": "rob",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/rob-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/rob-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/rob-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/rob-lib/src/test.ts",
+            "tsConfig": "projects/rob-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/rob-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/rob-lib/**/*.ts",
+              "projects/rob-lib/**/*.html"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ],
+    "analytics": "373d61bb-75c5-48d2-85ce-d964ce249969"
+  },
+  "schematics": {
+    "@angular-eslint/schematics:application": {
+      "setParserOptionsProject": true
+    },
+    "@angular-eslint/schematics:library": {
+      "setParserOptionsProject": true
     }
   }
 }

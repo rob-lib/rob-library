@@ -1,0 +1,74 @@
+#!/bin/bash
+
+# Obtén el nombre de la rama actual
+current_branch=$(git symbolic-ref --short HEAD)
+
+# Verifica si la rama local existe en el repositorio remoto
+if ! git show-ref --quiet --verify "refs/remotes/origin/$current_branch"; then
+  is_branch_creation=true
+else
+  is_branch_creation=false
+fi
+
+if [ "$is_branch_creation" = true ]; then
+  # Nombre de la nueva rama
+  new_branch_name="$current_branch"
+
+  # Verifica si la nueva rama comienza con "feature/" o "release/"
+  if [[ $new_branch_name == feature/* || $new_branch_name == release/* ]]; then
+    # Extrae el nombre del directorio de la rama (feature o release)
+    branch_directory="${new_branch_name%%/*}"
+
+    # Actualiza la versión en package.json en la raíz del proyecto
+    package_json_root="./package.json"
+    if [ -f "$package_json_root" ]; then
+      # Extrae la versión actual del archivo package.json en la raíz del proyecto
+      current_version=$(grep -o '"version": ".*"' "$package_json_root" | cut -d'"' -f4)
+
+      # Agrega el sufijo adecuado al nombre de la rama
+      if [[ $branch_directory == "feature" ]]; then
+        new_version="${current_version}-feature-${new_branch_name#feature/}"
+      elif [[ $branch_directory == "release" ]]; then
+        new_version="${current_version}-${new_branch_name#release/}"
+      else
+        new_version="$current_version"
+      fi
+
+      # Actualiza la versión en package.json en la raíz del proyecto
+      sed -i "s/\"version\": \"$current_version\"/\"version\": \"$new_version\"/" "$package_json_root"
+
+      # Actualiza la versión en package.json en el directorio projects/rob-lib
+      package_json_project="projects/rob-lib/package.json"
+      if [ -f "$package_json_project" ]; then
+        # Extrae la versión actual del archivo package.json en el directorio projects/rob-lib
+        current_version_project=$(grep -o '"version": ".*"' "$package_json_project" | cut -d'"' -f4)
+
+        # Actualiza la versión en package.json en el directorio projects/rob-lib
+        sed -i "s/\"version\": \"$current_version_project\"/\"version\": \"$new_version\"/" "$package_json_project"
+      else
+        echo "El archivo $package_json_project no se encuentra en la ruta especificada."
+        exit 1
+      fi
+
+      # Realiza un único commit que incluye ambos cambios con el formato de mensaje solicitado
+      git add "$package_json_root" "$package_json_project"
+      # git commit --no-verify -m "Init $branch_directory ${new_branch_name##*/}"
+
+      echo "Se ha actualizado la versión en $package_json_root y en $package_json_project a \"$new_version\""
+
+      # Realiza el push después de crear el commit
+      # git push origin "$current_branch"
+      # git fetch origin
+    else
+      echo "El archivo $package_json_root no se encuentra en la raíz del proyecto."
+      exit 1
+    fi
+  else
+    echo "No se realizaron cambios en package.json."
+  fi
+else
+  echo "la rama ya existe"
+fi
+
+# Sal de manera normal después del checkout
+exit 0

@@ -1,0 +1,21 @@
+.code-box__container {
+  background-color: whitesmoke;
+  border: solid 1px #d7d7d7;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 12px;
+
+  mat-icon {
+    color: #858585;
+    cursor: pointer;
+    font-size: 20px;
+    width: auto;
+    height: auto;
+  }
+}

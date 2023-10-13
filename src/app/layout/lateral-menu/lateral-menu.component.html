@@ -1,0 +1,17 @@
+<div class="lateral-menu_container">
+  <rob-lateral-menu>
+    <rob-lateral-menu-body>
+      <ng-container *ngFor="let route of routes">
+        <a mat-button [routerLink]="route.uri" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+          {{ route.name | translate }}
+        </a>
+      </ng-container>
+    </rob-lateral-menu-body>
+
+    <rob-lateral-menu-footer>
+      <a mat-button href="https://github.com/rwtews" target="_blank">
+        {{ author }}
+      </a>
+    </rob-lateral-menu-footer>
+  </rob-lateral-menu>
+</div>

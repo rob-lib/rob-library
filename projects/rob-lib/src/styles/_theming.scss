@@ -1,0 +1,43 @@
+@forward './themes/breaking-bad.theme' hide $primary-map, $secondary-map;
+
+@mixin set-theme($theme) {
+  $primary: (
+    color: map-get($theme, primary),
+    contrast: map-get($theme, primary, contrast)
+  );
+  $accent: (
+    color: map-get($theme, accent),
+    contrast: map-get($theme, accent, contrast)
+  );
+
+  .mdc-button:hover {
+    background-color: rgba(mat-color(map-get($primary, color), 50), 0.1);
+  }
+
+  .header_content {
+    background-color: mat-color(map-get($primary, color), 400);
+    color: mat-color(map-get($primary, contrast), 400)
+  }
+
+  .rob-lateral-menu-body_containter .mat-mdc-button:not(:disabled) {
+    &.active {
+      background-color: rgba(mat-color(map-get($accent, color), 900), 0.8);
+      color: mat-color(map-get($accent, contrast), 900);
+    }
+    &:not(.active):hover {
+      background-color: rgba(mat-color(map-get($accent, color), 50), 0.3);
+      color: mat-color(map-get($accent, contrast), 50);
+    }
+  }
+
+  .cdk-overlay-pane button {
+    &.active {
+      background-color: rgba(mat-color(map-get($accent, color), 900), 0.8);
+      color: mat-color(map-get($accent, contrast), 900);
+    }
+    &:not(.active):hover {
+      background-color: rgba(mat-color(map-get($accent, color), 50), 0.3);
+      color: mat-color(map-get($accent, contrast), 50);
+    }
+  }
+};

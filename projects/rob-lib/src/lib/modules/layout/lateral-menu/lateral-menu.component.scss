@@ -1,0 +1,13 @@
+.rob-lateral-menu_containter {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  background-color: #f3f3f3;
+  border-right: solid 1px #d1d1d1;
+  
+  -webkit-box-shadow: 10px 0px 24px -25px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 0px 24px -25px rgba(0,0,0,0.75);
+  box-shadow: 10px 0px 24px -25px rgba(0,0,0,0.75);
+}

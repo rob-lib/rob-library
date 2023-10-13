@@ -1,0 +1,18 @@
+<rob-header class="header-component_content" [title]="headerTitle">
+  <section class="header-component_content-menu">
+    <button mat-button color="accent">Lorem ipsum</button>
+    <button mat-button color="accent">Dolor sit amet</button>
+    <button mat-button color="accent">Consectetur adipisicing</button>
+
+    <button mat-button [matMenuTriggerFor]="appMenu">Menu</button>
+    <mat-menu #appMenu="matMenu">
+      <button
+        mat-menu-item
+        *ngFor="let lang of langs"
+        [ngClass]="{ active: headerService.targetLang === lang.value }"
+        (click)="headerService.translateLanguageTo(lang)">
+        {{ lang.viewValue }}
+      </button>
+    </mat-menu>
+  </section>
+</rob-header>
