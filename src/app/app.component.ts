@@ -16,6 +16,7 @@ export class AppComponent {
     { uri: '', name: 'Home' },
     { uri: 'text', name: 'Text' },
     { uri: 'spinner', name: 'Spinner' },
+    { uri: 'carrousel', name: 'Carrousel' },
   ];
 
   constructor(public headerService: HeaderService) {
