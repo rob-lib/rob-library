@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, ChangeDetectionStrategy, OnInit } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 import { CarouselItem } from './models/carousel-item.model';
 
 interface CarouselItemCustom extends CarouselItem {
@@ -19,17 +19,11 @@ interface CarouselItemCustom extends CarouselItem {
   styleUrls: ['./carousel.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CarouselComponent implements OnInit {
-  @Input() data!: CarouselItem[];
-  carouselData!: CarouselItemCustom[];
-
-  ngOnInit(): void {
-    if (this.data.length <= 10) {
-      this.carouselData = this.#transformData(this.data);
-    } else {
-      console.error(new Error(`maximum length of 10 has been exceeded`));
-    }
+export class CarouselComponent {
+  @Input() set data(value: CarouselItem[]) {
+    this.#setData(value);
   }
+  carouselData!: CarouselItemCustom[];
 
   #transformData(images: CarouselItem[]): CarouselItemCustom[] {
     return images.map((image, index, array) => {
@@ -48,5 +42,17 @@ export class CarouselComponent implements OnInit {
 
       return { ...image, id, checked, labels };
     });
+  }
+
+  #setData(value: CarouselItem[]) {
+    try {
+      if (value.length <= 10) {
+        this.carouselData = this.#transformData(value);
+      } else {
+        throw new Error(`maximum length of 10 has been exceeded`);
+      }
+    } catch (err) {
+      console.error(err);
+    }
   }
 }
