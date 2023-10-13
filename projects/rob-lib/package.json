@@ -1,6 +1,6 @@
 {
   "name": "rob-lib",
-  "version": "0.1.1-RC-01",
+  "version": "0.1.1",
   "peerDependencies": {
     "rxjs": "~7.5.0",
     "zone.js": "~0.13.3",
