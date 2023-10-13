@@ -15,7 +15,7 @@ import { MatMenuModule, MatMenuTrigger } from '@angular/material/menu';
 export class HeaderComponent {
   @ViewChild(MatMenuTrigger) trigger!: MatMenuTrigger;
 
-  headerTitle = 'Rick and Morty';
+  headerTitle = 'RobLibrary';
   langs = this.headerService.getLangs();
 
   constructor(public headerService: HeaderService) {}
