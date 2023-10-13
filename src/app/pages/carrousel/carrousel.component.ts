@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CarouselModule, CarouselItemModel, VerticalCarouselModule } from '@robLib/modules';
+import { CarouselModule, CarouselItemModel } from '@robLib/modules';
 
 @Component({
   selector: 'app-carrousel',
   standalone: true,
-  imports: [CommonModule, CarouselModule, VerticalCarouselModule],
+  imports: [CommonModule, CarouselModule],
   templateUrl: './carrousel.component.html',
   styleUrls: ['./carrousel.component.scss'],
 })
