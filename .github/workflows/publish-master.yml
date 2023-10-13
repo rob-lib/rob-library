@@ -15,5 +15,4 @@ jobs:
       - uses: JS-DevTools/npm-publish@v2
         with:
           token: ${{ secrets.NPM_TOKEN }}
-          registry: 'https://npm.pkg.github.com'
-          package: 'dist/@rob-lib'
+          package: './dist/@rob-lib/package.json'
