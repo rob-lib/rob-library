@@ -1,0 +1,7 @@
+<section class="carousel">
+  <rob-vertical-carousel-item
+    class="carousel__item"
+    *ngFor="let item of carouselItems; trackBy: trackByFn"
+    [item]="item"
+    [@carousel]="{ params: { delay: (27 / carouselItems.length) * item.id - 2 } }"></rob-vertical-carousel-item>
+</section>
