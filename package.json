@@ -14,7 +14,6 @@
     "git:config": "git config --local core.hooksPath .githooks/",
     "postinstall": "npm run git:config"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "^16.2.6",
     "@angular/cdk": "~16.2.6",
