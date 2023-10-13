@@ -26,7 +26,7 @@ module.exports = function (config) {
     },
     coverageReporter: {
       dir: require('path').join(__dirname, '../../coverage/rob-lib'),
-      subdir: '.',
+      subdir: 'src/lib/',
       reporters: [
         { type: 'html' },
         { type: 'text-summary' }
