@@ -15,7 +15,4 @@
     },
     "editor.formatOnSave": false
   },
-  "github-actions.workflows.pinned.workflows": [
-    ".github/workflows/publish-master.yml"
-  ],
 }
