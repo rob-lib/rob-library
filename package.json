@@ -1,6 +1,6 @@
 {
   "name": "rob-library",
-  "version": "0.1.1-feature-update-dependencies",
+  "version": "0.1.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
